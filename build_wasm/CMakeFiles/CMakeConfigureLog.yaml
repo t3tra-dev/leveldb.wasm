@@ -13,220 +13,184 @@ events:
     kind: "try_compile-v1"
     backtrace:
       - "/opt/homebrew/share/cmake/Modules/CheckIncludeFile.cmake:99 (try_compile)"
-      - "CMakeLists.txt:45 (check_include_file)"
+      - "CMakeLists.txt:64 (check_include_file)"
     checks:
       - "Looking for unistd.h"
     directories:
-      source: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-CHrZfN"
-      binary: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-CHrZfN"
+      source: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-XaXCCx"
+      binary: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-XaXCCx"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/opt/homebrew/bin/clang-scan-deps"
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: "  -s WASM=1 -s SINGLE_FILE=0 -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap'] -s EXPORTED_FUNCTIONS=['_main','_malloc','_free'] -s INITIAL_MEMORY=16MB -s ALLOW_MEMORY_GROWTH=1 -s FORCE_FILESYSTEM=1"
       CMAKE_MODULE_PATH: "/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules"
     buildResult:
       variable: "HAVE_UNISTD_H"
       cached: true
       stdout: |
-        Change Dir: '/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-CHrZfN'
+        Change Dir: '/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-XaXCCx'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_bbb76/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_bbb76.dir/build.make CMakeFiles/cmTC_bbb76.dir/build
-        Building C object CMakeFiles/cmTC_bbb76.dir/CheckIncludeFile.c.o
-        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/emcc   -std=c11 -MD -MT CMakeFiles/cmTC_bbb76.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_bbb76.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_bbb76.dir/CheckIncludeFile.c.o -c /Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-CHrZfN/CheckIncludeFile.c
-        shared:INFO: (Emscripten: Running sanity checks)
-        cache:INFO: generating system headers: sysroot_install.stamp... (this will be cached in "/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cache/sysroot_install.stamp" for subsequent builds)
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_0e693/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_0e693.dir/build.make CMakeFiles/cmTC_0e693.dir/build
+        Building C object CMakeFiles/cmTC_0e693.dir/CheckIncludeFile.c.o
+        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/emcc   -std=c11 -MD -MT CMakeFiles/cmTC_0e693.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_0e693.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_0e693.dir/CheckIncludeFile.c.o -c /Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-XaXCCx/CheckIncludeFile.c
+        Linking C executable cmTC_0e693.js
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0e693.dir/link.txt --verbose=1
+        cache:INFO: generating system asset: symbol_lists/f9add8b6915421909c653bc81b5284356b291743.json... (this will be cached in "/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cache/symbol_lists/f9add8b6915421909c653bc81b5284356b291743.json" for subsequent builds)
         cache:INFO:  - ok
-        Linking C executable cmTC_bbb76.js
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bbb76.dir/link.txt --verbose=1
-        cache:INFO: generating system library: sysroot/lib/wasm32-emscripten/libGL-getprocaddr.a... (this will be cached in "/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cache/sysroot/lib/wasm32-emscripten/libGL-getprocaddr.a" for subsequent builds)
-        system_libs:INFO: compiled 4 inputs in 0.13s
-        cache:INFO:  - ok
-        cache:INFO: generating system library: sysroot/lib/wasm32-emscripten/libal.a... (this will be cached in "/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cache/sysroot/lib/wasm32-emscripten/libal.a" for subsequent builds)
-        system_libs:INFO: compiled 1 inputs in 0.13s
-        cache:INFO:  - ok
-        cache:INFO: generating system library: sysroot/lib/wasm32-emscripten/libhtml5.a... (this will be cached in "/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cache/sysroot/lib/wasm32-emscripten/libhtml5.a" for subsequent builds)
-        system_libs:INFO: compiled 5 inputs in 0.14s
-        cache:INFO:  - ok
-        cache:INFO: generating system library: sysroot/lib/wasm32-emscripten/libstubs-debug.a... (this will be cached in "/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cache/sysroot/lib/wasm32-emscripten/libstubs-debug.a" for subsequent builds)
-        system_libs:INFO: compiled 2 inputs in 0.13s
-        cache:INFO:  - ok
-        cache:INFO: generating system library: sysroot/lib/wasm32-emscripten/libnoexit.a... (this will be cached in "/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cache/sysroot/lib/wasm32-emscripten/libnoexit.a" for subsequent builds)
-        system_libs:INFO: compiled 1 inputs in 0.13s
-        cache:INFO:  - ok
-        cache:INFO: generating system library: sysroot/lib/wasm32-emscripten/libc-debug.a... (this will be cached in "/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cache/sysroot/lib/wasm32-emscripten/libc-debug.a" for subsequent builds)
-        system_libs:INFO: compiled 1043 inputs in 2.55s
-        cache:INFO:  - ok
-        cache:INFO: generating system library: sysroot/lib/wasm32-emscripten/libdlmalloc-debug.a... (this will be cached in "/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cache/sysroot/lib/wasm32-emscripten/libdlmalloc-debug.a" for subsequent builds)
-        system_libs:INFO: compiled 2 inputs in 0.25s
-        cache:INFO:  - ok
-        cache:INFO: generating system library: sysroot/lib/wasm32-emscripten/libcompiler_rt.a... (this will be cached in "/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cache/sysroot/lib/wasm32-emscripten/libcompiler_rt.a" for subsequent builds)
-        system_libs:INFO: compiled 162 inputs in 0.81s
-        cache:INFO:  - ok
-        cache:INFO: generating system library: sysroot/lib/wasm32-emscripten/libc++-noexcept.a... (this will be cached in "/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cache/sysroot/lib/wasm32-emscripten/libc++-noexcept.a" for subsequent builds)
-        system_libs:INFO: compiled 57 inputs in 2.40s
-        cache:INFO:  - ok
-        cache:INFO: generating system library: sysroot/lib/wasm32-emscripten/libc++abi-debug-noexcept.a... (this will be cached in "/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cache/sysroot/lib/wasm32-emscripten/libc++abi-debug-noexcept.a" for subsequent builds)
-        system_libs:INFO: compiled 16 inputs in 1.12s
-        cache:INFO:  - ok
-        cache:INFO: generating system library: sysroot/lib/wasm32-emscripten/libsockets.a... (this will be cached in "/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cache/sysroot/lib/wasm32-emscripten/libsockets.a" for subsequent builds)
-        system_libs:INFO: compiled 27 inputs in 0.31s
-        cache:INFO:  - ok
-        cache:INFO: generating system asset: symbol_lists/534de7832fab6ae54e1ccdfe325a94bbab2adec4.json... (this will be cached in "/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cache/symbol_lists/534de7832fab6ae54e1ccdfe325a94bbab2adec4.json" for subsequent builds)
-        cache:INFO:  - ok
-        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/emcc @CMakeFiles/cmTC_bbb76.dir/objects1.rsp -o cmTC_bbb76.js
+        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/emcc   -s WASM=1 -s SINGLE_FILE=0 -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap'] -s EXPORTED_FUNCTIONS=['_main','_malloc','_free'] -s INITIAL_MEMORY=16MB -s ALLOW_MEMORY_GROWTH=1 -s FORCE_FILESYSTEM=1  @CMakeFiles/cmTC_0e693.dir/objects1.rsp -o cmTC_0e693.js
         
       exitCode: 0
   -
     kind: "try_compile-v1"
     backtrace:
       - "/opt/homebrew/share/cmake/Modules/CheckLibraryExists.cmake:78 (try_compile)"
-      - "CMakeLists.txt:48 (check_library_exists)"
+      - "CMakeLists.txt:67 (check_library_exists)"
     checks:
       - "Looking for crc32c_value in crc32c"
     directories:
-      source: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-gE9Pw6"
-      binary: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-gE9Pw6"
+      source: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-o7qKXm"
+      binary: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-o7qKXm"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/opt/homebrew/bin/clang-scan-deps"
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: "  -s WASM=1 -s SINGLE_FILE=0 -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap'] -s EXPORTED_FUNCTIONS=['_main','_malloc','_free'] -s INITIAL_MEMORY=16MB -s ALLOW_MEMORY_GROWTH=1 -s FORCE_FILESYSTEM=1"
       CMAKE_MODULE_PATH: "/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules"
     buildResult:
       variable: "HAVE_CRC32C"
       cached: true
       stdout: |
-        Change Dir: '/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-gE9Pw6'
+        Change Dir: '/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-o7qKXm'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_8f6c5/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_8f6c5.dir/build.make CMakeFiles/cmTC_8f6c5.dir/build
-        Building C object CMakeFiles/cmTC_8f6c5.dir/CheckFunctionExists.c.o
-        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/emcc   -DCHECK_FUNCTION_EXISTS=crc32c_value -std=c11 -MD -MT CMakeFiles/cmTC_8f6c5.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_8f6c5.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_8f6c5.dir/CheckFunctionExists.c.o -c /Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-gE9Pw6/CheckFunctionExists.c
-        Linking C executable cmTC_8f6c5.js
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8f6c5.dir/link.txt --verbose=1
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_ca255/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_ca255.dir/build.make CMakeFiles/cmTC_ca255.dir/build
+        Building C object CMakeFiles/cmTC_ca255.dir/CheckFunctionExists.c.o
+        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/emcc   -DCHECK_FUNCTION_EXISTS=crc32c_value -std=c11 -MD -MT CMakeFiles/cmTC_ca255.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_ca255.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_ca255.dir/CheckFunctionExists.c.o -c /Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-o7qKXm/CheckFunctionExists.c
+        Linking C executable cmTC_ca255.js
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ca255.dir/link.txt --verbose=1
         wasm-ld: error: unable to find library -lcrc32c
-        emcc: error: '/opt/homebrew/Cellar/emscripten/4.0.0/libexec/llvm/bin/wasm-ld -o cmTC_8f6c5.wasm CMakeFiles/cmTC_8f6c5.dir/CheckFunctionExists.c.o -lcrc32c -L/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cache/sysroot/lib/wasm32-emscripten -lGL-getprocaddr -lal -lhtml5 -lstubs-debug -lnoexit -lc-debug -ldlmalloc-debug -lcompiler_rt -lc++-noexcept -lc++abi-debug-noexcept -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr /var/folders/td/d2t00v0s3t53qvl_jtlkjb7r0000gn/T/tmpqjjwcvublibemscripten_js_symbols.so --strip-debug --export=emscripten_stack_get_end --export=emscripten_stack_get_free --export=emscripten_stack_get_base --export=emscripten_stack_get_current --export=emscripten_stack_init --export=_emscripten_stack_alloc --export=__wasm_call_ctors --export=_emscripten_stack_restore --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_lib_deps --export-if-defined=__stop_em_lib_deps --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=main --export-if-defined=__main_argc_argv --export-if-defined=fflush --export-table -z stack-size=65536 --no-growable-memory --initial-heap=16777216 --no-entry --stack-first --table-base=1' failed (returned 1)
-        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/emcc  -DCHECK_FUNCTION_EXISTS=crc32c_value @CMakeFiles/cmTC_8f6c5.dir/objects1.rsp -o cmTC_8f6c5.js @CMakeFiles/cmTC_8f6c5.dir/linkLibs.rsp
-        make[1]: *** [cmTC_8f6c5.js] Error 1
-        make: *** [cmTC_8f6c5/fast] Error 2
+        emcc: error: '/opt/homebrew/Cellar/emscripten/4.0.0/libexec/llvm/bin/wasm-ld -o cmTC_ca255.wasm CMakeFiles/cmTC_ca255.dir/CheckFunctionExists.c.o -lcrc32c -L/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cache/sysroot/lib/wasm32-emscripten -lGL-getprocaddr -lal -lhtml5 -lstubs-debug -lnoexit -lc-debug -ldlmalloc-debug -lcompiler_rt -lc++-noexcept -lc++abi-debug-noexcept -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr /var/folders/td/d2t00v0s3t53qvl_jtlkjb7r0000gn/T/tmp6uiru9_jlibemscripten_js_symbols.so --strip-debug --export=malloc --export=free --export=emscripten_stack_get_end --export=emscripten_stack_get_free --export=emscripten_stack_get_base --export=emscripten_stack_get_current --export=emscripten_stack_init --export=_emscripten_stack_alloc --export=__wasm_call_ctors --export=_emscripten_stack_restore --export=strerror --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_lib_deps --export-if-defined=__stop_em_lib_deps --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=main --export-if-defined=__main_argc_argv --export-if-defined=fflush --export-table -z stack-size=65536 --max-memory=2147483648 --initial-memory=16777216 --no-entry --stack-first --table-base=1' failed (returned 1)
+        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/emcc  -DCHECK_FUNCTION_EXISTS=crc32c_value   -s WASM=1 -s SINGLE_FILE=0 -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap'] -s EXPORTED_FUNCTIONS=['_main','_malloc','_free'] -s INITIAL_MEMORY=16MB -s ALLOW_MEMORY_GROWTH=1 -s FORCE_FILESYSTEM=1  @CMakeFiles/cmTC_ca255.dir/objects1.rsp -o cmTC_ca255.js @CMakeFiles/cmTC_ca255.dir/linkLibs.rsp
+        make[1]: *** [cmTC_ca255.js] Error 1
+        make: *** [cmTC_ca255/fast] Error 2
         
       exitCode: 2
   -
     kind: "try_compile-v1"
     backtrace:
       - "/opt/homebrew/share/cmake/Modules/CheckLibraryExists.cmake:78 (try_compile)"
-      - "CMakeLists.txt:49 (check_library_exists)"
+      - "CMakeLists.txt:68 (check_library_exists)"
     checks:
       - "Looking for snappy_compress in snappy"
     directories:
-      source: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-3lmQ9C"
-      binary: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-3lmQ9C"
+      source: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-DvMNld"
+      binary: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-DvMNld"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/opt/homebrew/bin/clang-scan-deps"
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: "  -s WASM=1 -s SINGLE_FILE=0 -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap'] -s EXPORTED_FUNCTIONS=['_main','_malloc','_free'] -s INITIAL_MEMORY=16MB -s ALLOW_MEMORY_GROWTH=1 -s FORCE_FILESYSTEM=1"
       CMAKE_MODULE_PATH: "/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules"
     buildResult:
       variable: "HAVE_SNAPPY"
       cached: true
       stdout: |
-        Change Dir: '/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-3lmQ9C'
+        Change Dir: '/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-DvMNld'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_af51a/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_af51a.dir/build.make CMakeFiles/cmTC_af51a.dir/build
-        Building C object CMakeFiles/cmTC_af51a.dir/CheckFunctionExists.c.o
-        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/emcc   -DCHECK_FUNCTION_EXISTS=snappy_compress -std=c11 -MD -MT CMakeFiles/cmTC_af51a.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_af51a.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_af51a.dir/CheckFunctionExists.c.o -c /Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-3lmQ9C/CheckFunctionExists.c
-        Linking C executable cmTC_af51a.js
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_af51a.dir/link.txt --verbose=1
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_466fc/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_466fc.dir/build.make CMakeFiles/cmTC_466fc.dir/build
+        Building C object CMakeFiles/cmTC_466fc.dir/CheckFunctionExists.c.o
+        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/emcc   -DCHECK_FUNCTION_EXISTS=snappy_compress -std=c11 -MD -MT CMakeFiles/cmTC_466fc.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_466fc.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_466fc.dir/CheckFunctionExists.c.o -c /Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-DvMNld/CheckFunctionExists.c
+        Linking C executable cmTC_466fc.js
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_466fc.dir/link.txt --verbose=1
         wasm-ld: error: unable to find library -lsnappy
-        emcc: error: '/opt/homebrew/Cellar/emscripten/4.0.0/libexec/llvm/bin/wasm-ld -o cmTC_af51a.wasm CMakeFiles/cmTC_af51a.dir/CheckFunctionExists.c.o -lsnappy -L/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cache/sysroot/lib/wasm32-emscripten -lGL-getprocaddr -lal -lhtml5 -lstubs-debug -lnoexit -lc-debug -ldlmalloc-debug -lcompiler_rt -lc++-noexcept -lc++abi-debug-noexcept -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr /var/folders/td/d2t00v0s3t53qvl_jtlkjb7r0000gn/T/tmpl2osytoklibemscripten_js_symbols.so --strip-debug --export=emscripten_stack_get_end --export=emscripten_stack_get_free --export=emscripten_stack_get_base --export=emscripten_stack_get_current --export=emscripten_stack_init --export=_emscripten_stack_alloc --export=__wasm_call_ctors --export=_emscripten_stack_restore --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_lib_deps --export-if-defined=__stop_em_lib_deps --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=main --export-if-defined=__main_argc_argv --export-if-defined=fflush --export-table -z stack-size=65536 --no-growable-memory --initial-heap=16777216 --no-entry --stack-first --table-base=1' failed (returned 1)
-        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/emcc  -DCHECK_FUNCTION_EXISTS=snappy_compress @CMakeFiles/cmTC_af51a.dir/objects1.rsp -o cmTC_af51a.js @CMakeFiles/cmTC_af51a.dir/linkLibs.rsp
-        make[1]: *** [cmTC_af51a.js] Error 1
-        make: *** [cmTC_af51a/fast] Error 2
+        emcc: error: '/opt/homebrew/Cellar/emscripten/4.0.0/libexec/llvm/bin/wasm-ld -o cmTC_466fc.wasm CMakeFiles/cmTC_466fc.dir/CheckFunctionExists.c.o -lsnappy -L/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cache/sysroot/lib/wasm32-emscripten -lGL-getprocaddr -lal -lhtml5 -lstubs-debug -lnoexit -lc-debug -ldlmalloc-debug -lcompiler_rt -lc++-noexcept -lc++abi-debug-noexcept -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr /var/folders/td/d2t00v0s3t53qvl_jtlkjb7r0000gn/T/tmpgr3p5ehylibemscripten_js_symbols.so --strip-debug --export=malloc --export=free --export=emscripten_stack_get_end --export=emscripten_stack_get_free --export=emscripten_stack_get_base --export=emscripten_stack_get_current --export=emscripten_stack_init --export=_emscripten_stack_alloc --export=__wasm_call_ctors --export=_emscripten_stack_restore --export=strerror --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_lib_deps --export-if-defined=__stop_em_lib_deps --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=main --export-if-defined=__main_argc_argv --export-if-defined=fflush --export-table -z stack-size=65536 --max-memory=2147483648 --initial-memory=16777216 --no-entry --stack-first --table-base=1' failed (returned 1)
+        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/emcc  -DCHECK_FUNCTION_EXISTS=snappy_compress   -s WASM=1 -s SINGLE_FILE=0 -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap'] -s EXPORTED_FUNCTIONS=['_main','_malloc','_free'] -s INITIAL_MEMORY=16MB -s ALLOW_MEMORY_GROWTH=1 -s FORCE_FILESYSTEM=1  @CMakeFiles/cmTC_466fc.dir/objects1.rsp -o cmTC_466fc.js @CMakeFiles/cmTC_466fc.dir/linkLibs.rsp
+        make[1]: *** [cmTC_466fc.js] Error 1
+        make: *** [cmTC_466fc/fast] Error 2
         
       exitCode: 2
   -
     kind: "try_compile-v1"
     backtrace:
       - "/opt/homebrew/share/cmake/Modules/CheckLibraryExists.cmake:78 (try_compile)"
-      - "CMakeLists.txt:50 (check_library_exists)"
+      - "CMakeLists.txt:69 (check_library_exists)"
     checks:
       - "Looking for zstd_compress in zstd"
     directories:
-      source: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-YeOy0M"
-      binary: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-YeOy0M"
+      source: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-tFiuE2"
+      binary: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-tFiuE2"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/opt/homebrew/bin/clang-scan-deps"
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: "  -s WASM=1 -s SINGLE_FILE=0 -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap'] -s EXPORTED_FUNCTIONS=['_main','_malloc','_free'] -s INITIAL_MEMORY=16MB -s ALLOW_MEMORY_GROWTH=1 -s FORCE_FILESYSTEM=1"
       CMAKE_MODULE_PATH: "/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules"
     buildResult:
       variable: "HAVE_ZSTD"
       cached: true
       stdout: |
-        Change Dir: '/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-YeOy0M'
+        Change Dir: '/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-tFiuE2'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_2f525/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_2f525.dir/build.make CMakeFiles/cmTC_2f525.dir/build
-        Building C object CMakeFiles/cmTC_2f525.dir/CheckFunctionExists.c.o
-        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/emcc   -DCHECK_FUNCTION_EXISTS=zstd_compress -std=c11 -MD -MT CMakeFiles/cmTC_2f525.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_2f525.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_2f525.dir/CheckFunctionExists.c.o -c /Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-YeOy0M/CheckFunctionExists.c
-        Linking C executable cmTC_2f525.js
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2f525.dir/link.txt --verbose=1
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_0cc1f/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_0cc1f.dir/build.make CMakeFiles/cmTC_0cc1f.dir/build
+        Building C object CMakeFiles/cmTC_0cc1f.dir/CheckFunctionExists.c.o
+        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/emcc   -DCHECK_FUNCTION_EXISTS=zstd_compress -std=c11 -MD -MT CMakeFiles/cmTC_0cc1f.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_0cc1f.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_0cc1f.dir/CheckFunctionExists.c.o -c /Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-tFiuE2/CheckFunctionExists.c
+        Linking C executable cmTC_0cc1f.js
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0cc1f.dir/link.txt --verbose=1
         wasm-ld: error: unable to find library -lzstd
-        emcc: error: '/opt/homebrew/Cellar/emscripten/4.0.0/libexec/llvm/bin/wasm-ld -o cmTC_2f525.wasm CMakeFiles/cmTC_2f525.dir/CheckFunctionExists.c.o -lzstd -L/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cache/sysroot/lib/wasm32-emscripten -lGL-getprocaddr -lal -lhtml5 -lstubs-debug -lnoexit -lc-debug -ldlmalloc-debug -lcompiler_rt -lc++-noexcept -lc++abi-debug-noexcept -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr /var/folders/td/d2t00v0s3t53qvl_jtlkjb7r0000gn/T/tmpm5kjhyljlibemscripten_js_symbols.so --strip-debug --export=emscripten_stack_get_end --export=emscripten_stack_get_free --export=emscripten_stack_get_base --export=emscripten_stack_get_current --export=emscripten_stack_init --export=_emscripten_stack_alloc --export=__wasm_call_ctors --export=_emscripten_stack_restore --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_lib_deps --export-if-defined=__stop_em_lib_deps --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=main --export-if-defined=__main_argc_argv --export-if-defined=fflush --export-table -z stack-size=65536 --no-growable-memory --initial-heap=16777216 --no-entry --stack-first --table-base=1' failed (returned 1)
-        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/emcc  -DCHECK_FUNCTION_EXISTS=zstd_compress @CMakeFiles/cmTC_2f525.dir/objects1.rsp -o cmTC_2f525.js @CMakeFiles/cmTC_2f525.dir/linkLibs.rsp
-        make[1]: *** [cmTC_2f525.js] Error 1
-        make: *** [cmTC_2f525/fast] Error 2
+        emcc: error: '/opt/homebrew/Cellar/emscripten/4.0.0/libexec/llvm/bin/wasm-ld -o cmTC_0cc1f.wasm CMakeFiles/cmTC_0cc1f.dir/CheckFunctionExists.c.o -lzstd -L/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cache/sysroot/lib/wasm32-emscripten -lGL-getprocaddr -lal -lhtml5 -lstubs-debug -lnoexit -lc-debug -ldlmalloc-debug -lcompiler_rt -lc++-noexcept -lc++abi-debug-noexcept -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr /var/folders/td/d2t00v0s3t53qvl_jtlkjb7r0000gn/T/tmp0evne3djlibemscripten_js_symbols.so --strip-debug --export=malloc --export=free --export=emscripten_stack_get_end --export=emscripten_stack_get_free --export=emscripten_stack_get_base --export=emscripten_stack_get_current --export=emscripten_stack_init --export=_emscripten_stack_alloc --export=__wasm_call_ctors --export=_emscripten_stack_restore --export=strerror --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_lib_deps --export-if-defined=__stop_em_lib_deps --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=main --export-if-defined=__main_argc_argv --export-if-defined=fflush --export-table -z stack-size=65536 --max-memory=2147483648 --initial-memory=16777216 --no-entry --stack-first --table-base=1' failed (returned 1)
+        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/emcc  -DCHECK_FUNCTION_EXISTS=zstd_compress   -s WASM=1 -s SINGLE_FILE=0 -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap'] -s EXPORTED_FUNCTIONS=['_main','_malloc','_free'] -s INITIAL_MEMORY=16MB -s ALLOW_MEMORY_GROWTH=1 -s FORCE_FILESYSTEM=1  @CMakeFiles/cmTC_0cc1f.dir/objects1.rsp -o cmTC_0cc1f.js @CMakeFiles/cmTC_0cc1f.dir/linkLibs.rsp
+        make[1]: *** [cmTC_0cc1f.js] Error 1
+        make: *** [cmTC_0cc1f/fast] Error 2
         
       exitCode: 2
   -
     kind: "try_compile-v1"
     backtrace:
       - "/opt/homebrew/share/cmake/Modules/CheckLibraryExists.cmake:78 (try_compile)"
-      - "CMakeLists.txt:51 (check_library_exists)"
+      - "CMakeLists.txt:70 (check_library_exists)"
     checks:
       - "Looking for malloc in tcmalloc"
     directories:
-      source: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-PszCZW"
-      binary: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-PszCZW"
+      source: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-NNfzj1"
+      binary: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-NNfzj1"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/opt/homebrew/bin/clang-scan-deps"
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: "  -s WASM=1 -s SINGLE_FILE=0 -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap'] -s EXPORTED_FUNCTIONS=['_main','_malloc','_free'] -s INITIAL_MEMORY=16MB -s ALLOW_MEMORY_GROWTH=1 -s FORCE_FILESYSTEM=1"
       CMAKE_MODULE_PATH: "/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules"
     buildResult:
       variable: "HAVE_TCMALLOC"
       cached: true
       stdout: |
-        Change Dir: '/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-PszCZW'
+        Change Dir: '/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-NNfzj1'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_149c2/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_149c2.dir/build.make CMakeFiles/cmTC_149c2.dir/build
-        Building C object CMakeFiles/cmTC_149c2.dir/CheckFunctionExists.c.o
-        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/emcc   -DCHECK_FUNCTION_EXISTS=malloc -std=c11 -MD -MT CMakeFiles/cmTC_149c2.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_149c2.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_149c2.dir/CheckFunctionExists.c.o -c /Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-PszCZW/CheckFunctionExists.c
-        /Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-PszCZW/CheckFunctionExists.c:7:3: warning: incompatible redeclaration of library function 'malloc' [-Wincompatible-library-redeclaration]
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_05e1b/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_05e1b.dir/build.make CMakeFiles/cmTC_05e1b.dir/build
+        Building C object CMakeFiles/cmTC_05e1b.dir/CheckFunctionExists.c.o
+        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/emcc   -DCHECK_FUNCTION_EXISTS=malloc -std=c11 -MD -MT CMakeFiles/cmTC_05e1b.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_05e1b.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_05e1b.dir/CheckFunctionExists.c.o -c /Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-NNfzj1/CheckFunctionExists.c
+        /Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-NNfzj1/CheckFunctionExists.c:7:3: warning: incompatible redeclaration of library function 'malloc' [-Wincompatible-library-redeclaration]
             7 |   CHECK_FUNCTION_EXISTS(void);
               |   ^
         <command line>:2:31: note: expanded from macro 'CHECK_FUNCTION_EXISTS'
             2 | #define CHECK_FUNCTION_EXISTS malloc
               |                               ^
-        /Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-PszCZW/CheckFunctionExists.c:7:3: note: 'malloc' is a builtin with type 'void *(unsigned long)'
+        /Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-NNfzj1/CheckFunctionExists.c:7:3: note: 'malloc' is a builtin with type 'void *(unsigned long)'
         <command line>:2:31: note: expanded from macro 'CHECK_FUNCTION_EXISTS'
             2 | #define CHECK_FUNCTION_EXISTS malloc
               |                               ^
         1 warning generated.
-        Linking C executable cmTC_149c2.js
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_149c2.dir/link.txt --verbose=1
+        Linking C executable cmTC_05e1b.js
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_05e1b.dir/link.txt --verbose=1
         wasm-ld: error: unable to find library -ltcmalloc
-        emcc: error: '/opt/homebrew/Cellar/emscripten/4.0.0/libexec/llvm/bin/wasm-ld -o cmTC_149c2.wasm CMakeFiles/cmTC_149c2.dir/CheckFunctionExists.c.o -ltcmalloc -L/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cache/sysroot/lib/wasm32-emscripten -lGL-getprocaddr -lal -lhtml5 -lstubs-debug -lnoexit -lc-debug -ldlmalloc-debug -lcompiler_rt -lc++-noexcept -lc++abi-debug-noexcept -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr /var/folders/td/d2t00v0s3t53qvl_jtlkjb7r0000gn/T/tmp276cbv61libemscripten_js_symbols.so --strip-debug --export=emscripten_stack_get_end --export=emscripten_stack_get_free --export=emscripten_stack_get_base --export=emscripten_stack_get_current --export=emscripten_stack_init --export=_emscripten_stack_alloc --export=__wasm_call_ctors --export=_emscripten_stack_restore --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_lib_deps --export-if-defined=__stop_em_lib_deps --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=main --export-if-defined=__main_argc_argv --export-if-defined=fflush --export-table -z stack-size=65536 --no-growable-memory --initial-heap=16777216 --no-entry --stack-first --table-base=1' failed (returned 1)
-        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/emcc  -DCHECK_FUNCTION_EXISTS=malloc @CMakeFiles/cmTC_149c2.dir/objects1.rsp -o cmTC_149c2.js @CMakeFiles/cmTC_149c2.dir/linkLibs.rsp
-        make[1]: *** [cmTC_149c2.js] Error 1
-        make: *** [cmTC_149c2/fast] Error 2
+        emcc: error: '/opt/homebrew/Cellar/emscripten/4.0.0/libexec/llvm/bin/wasm-ld -o cmTC_05e1b.wasm CMakeFiles/cmTC_05e1b.dir/CheckFunctionExists.c.o -ltcmalloc -L/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cache/sysroot/lib/wasm32-emscripten -lGL-getprocaddr -lal -lhtml5 -lstubs-debug -lnoexit -lc-debug -ldlmalloc-debug -lcompiler_rt -lc++-noexcept -lc++abi-debug-noexcept -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr /var/folders/td/d2t00v0s3t53qvl_jtlkjb7r0000gn/T/tmp7yj0682clibemscripten_js_symbols.so --strip-debug --export=malloc --export=free --export=emscripten_stack_get_end --export=emscripten_stack_get_free --export=emscripten_stack_get_base --export=emscripten_stack_get_current --export=emscripten_stack_init --export=_emscripten_stack_alloc --export=__wasm_call_ctors --export=_emscripten_stack_restore --export=strerror --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_lib_deps --export-if-defined=__stop_em_lib_deps --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=main --export-if-defined=__main_argc_argv --export-if-defined=fflush --export-table -z stack-size=65536 --max-memory=2147483648 --initial-memory=16777216 --no-entry --stack-first --table-base=1' failed (returned 1)
+        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/emcc  -DCHECK_FUNCTION_EXISTS=malloc   -s WASM=1 -s SINGLE_FILE=0 -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap'] -s EXPORTED_FUNCTIONS=['_main','_malloc','_free'] -s INITIAL_MEMORY=16MB -s ALLOW_MEMORY_GROWTH=1 -s FORCE_FILESYSTEM=1  @CMakeFiles/cmTC_05e1b.dir/objects1.rsp -o cmTC_05e1b.js @CMakeFiles/cmTC_05e1b.dir/linkLibs.rsp
+        make[1]: *** [cmTC_05e1b.js] Error 1
+        make: *** [cmTC_05e1b/fast] Error 2
         
       exitCode: 2
   -
@@ -234,36 +198,34 @@ events:
     backtrace:
       - "/opt/homebrew/share/cmake/Modules/CheckSymbolExists.cmake:163 (try_compile)"
       - "/opt/homebrew/share/cmake/Modules/CheckCXXSymbolExists.cmake:74 (__CHECK_SYMBOL_EXISTS_IMPL)"
-      - "CMakeLists.txt:59 (check_cxx_symbol_exists)"
+      - "CMakeLists.txt:78 (check_cxx_symbol_exists)"
     checks:
       - "Looking for fdatasync"
     directories:
-      source: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-S1aTRK"
-      binary: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-S1aTRK"
+      source: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-RFRF79"
+      binary: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-RFRF79"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/opt/homebrew/bin/clang-scan-deps"
-      CMAKE_CXX_FLAGS: " -s WASM=1 -s EXPORTED_FUNCTIONS=['_main'] -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap']"
+      CMAKE_CXX_FLAGS: " -pthread"
       CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: "  -s WASM=1 -s SINGLE_FILE=0 -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap'] -s EXPORTED_FUNCTIONS=['_main','_malloc','_free'] -s INITIAL_MEMORY=16MB -s ALLOW_MEMORY_GROWTH=1 -s FORCE_FILESYSTEM=1"
       CMAKE_MODULE_PATH: "/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules"
     buildResult:
       variable: "HAVE_FDATASYNC"
       cached: true
       stdout: |
-        Change Dir: '/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-S1aTRK'
+        Change Dir: '/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-RFRF79'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_b6e77/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_b6e77.dir/build.make CMakeFiles/cmTC_b6e77.dir/build
-        Building CXX object CMakeFiles/cmTC_b6e77.dir/CheckSymbolExists.cxx.o
-        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/em++   -s WASM=1 -s EXPORTED_FUNCTIONS=['_main'] -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap']  -std=c++11 -MD -MT CMakeFiles/cmTC_b6e77.dir/CheckSymbolExists.cxx.o -MF CMakeFiles/cmTC_b6e77.dir/CheckSymbolExists.cxx.o.d -o CMakeFiles/cmTC_b6e77.dir/CheckSymbolExists.cxx.o -c /Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-S1aTRK/CheckSymbolExists.cxx
-        em++: warning: linker setting ignored during compilation: 'WASM' [-Wunused-command-line-argument]
-        em++: warning: linker setting ignored during compilation: 'EXPORTED_FUNCTIONS' [-Wunused-command-line-argument]
-        em++: warning: linker setting ignored during compilation: 'EXPORTED_RUNTIME_METHODS' [-Wunused-command-line-argument]
-        Linking CXX executable cmTC_b6e77.js
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b6e77.dir/link.txt --verbose=1
-        cache:INFO: generating system asset: symbol_lists/fc341b70e5d1ec8cb57354f879e0f2bcaf43e0a0.json... (this will be cached in "/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cache/symbol_lists/fc341b70e5d1ec8cb57354f879e0f2bcaf43e0a0.json" for subsequent builds)
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_20ec8/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_20ec8.dir/build.make CMakeFiles/cmTC_20ec8.dir/build
+        Building CXX object CMakeFiles/cmTC_20ec8.dir/CheckSymbolExists.cxx.o
+        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/em++   -pthread  -std=c++11 -MD -MT CMakeFiles/cmTC_20ec8.dir/CheckSymbolExists.cxx.o -MF CMakeFiles/cmTC_20ec8.dir/CheckSymbolExists.cxx.o.d -o CMakeFiles/cmTC_20ec8.dir/CheckSymbolExists.cxx.o -c /Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-RFRF79/CheckSymbolExists.cxx
+        Linking CXX executable cmTC_20ec8.js
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_20ec8.dir/link.txt --verbose=1
+        em++: warning: -pthread + ALLOW_MEMORY_GROWTH may run non-wasm code slowly, see https://github.com/WebAssembly/design/issues/1271 [-Wpthreads-mem-growth]
+        cache:INFO: generating system asset: symbol_lists/71fca905e636b3a638f7b5bd03bef6c7c8c43f24.json... (this will be cached in "/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cache/symbol_lists/71fca905e636b3a638f7b5bd03bef6c7c8c43f24.json" for subsequent builds)
         cache:INFO:  - ok
-        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/em++  -s WASM=1 -s EXPORTED_FUNCTIONS=['_main'] -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap']  @CMakeFiles/cmTC_b6e77.dir/objects1.rsp -o cmTC_b6e77.js
+        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/em++  -pthread    -s WASM=1 -s SINGLE_FILE=0 -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap'] -s EXPORTED_FUNCTIONS=['_main','_malloc','_free'] -s INITIAL_MEMORY=16MB -s ALLOW_MEMORY_GROWTH=1 -s FORCE_FILESYSTEM=1  @CMakeFiles/cmTC_20ec8.dir/objects1.rsp -o cmTC_20ec8.js
         
       exitCode: 0
   -
@@ -271,37 +233,34 @@ events:
     backtrace:
       - "/opt/homebrew/share/cmake/Modules/CheckSymbolExists.cmake:163 (try_compile)"
       - "/opt/homebrew/share/cmake/Modules/CheckCXXSymbolExists.cmake:74 (__CHECK_SYMBOL_EXISTS_IMPL)"
-      - "CMakeLists.txt:60 (check_cxx_symbol_exists)"
+      - "CMakeLists.txt:79 (check_cxx_symbol_exists)"
     checks:
       - "Looking for F_FULLFSYNC"
     directories:
-      source: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-Yya0rN"
-      binary: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-Yya0rN"
+      source: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-UxqmOW"
+      binary: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-UxqmOW"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/opt/homebrew/bin/clang-scan-deps"
-      CMAKE_CXX_FLAGS: " -s WASM=1 -s EXPORTED_FUNCTIONS=['_main'] -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap']"
+      CMAKE_CXX_FLAGS: " -pthread"
       CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: "  -s WASM=1 -s SINGLE_FILE=0 -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap'] -s EXPORTED_FUNCTIONS=['_main','_malloc','_free'] -s INITIAL_MEMORY=16MB -s ALLOW_MEMORY_GROWTH=1 -s FORCE_FILESYSTEM=1"
       CMAKE_MODULE_PATH: "/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules"
     buildResult:
       variable: "HAVE_FULLFSYNC"
       cached: true
       stdout: |
-        Change Dir: '/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-Yya0rN'
+        Change Dir: '/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-UxqmOW'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_3a267/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_3a267.dir/build.make CMakeFiles/cmTC_3a267.dir/build
-        Building CXX object CMakeFiles/cmTC_3a267.dir/CheckSymbolExists.cxx.o
-        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/em++   -s WASM=1 -s EXPORTED_FUNCTIONS=['_main'] -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap']  -std=c++11 -MD -MT CMakeFiles/cmTC_3a267.dir/CheckSymbolExists.cxx.o -MF CMakeFiles/cmTC_3a267.dir/CheckSymbolExists.cxx.o.d -o CMakeFiles/cmTC_3a267.dir/CheckSymbolExists.cxx.o -c /Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-Yya0rN/CheckSymbolExists.cxx
-        em++: warning: linker setting ignored during compilation: 'WASM' [-Wunused-command-line-argument]
-        em++: warning: linker setting ignored during compilation: 'EXPORTED_FUNCTIONS' [-Wunused-command-line-argument]
-        em++: warning: linker setting ignored during compilation: 'EXPORTED_RUNTIME_METHODS' [-Wunused-command-line-argument]
-        /Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-Yya0rN/CheckSymbolExists.cxx:8:19: error: use of undeclared identifier 'F_FULLFSYNC'
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_2960a/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_2960a.dir/build.make CMakeFiles/cmTC_2960a.dir/build
+        Building CXX object CMakeFiles/cmTC_2960a.dir/CheckSymbolExists.cxx.o
+        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/em++   -pthread  -std=c++11 -MD -MT CMakeFiles/cmTC_2960a.dir/CheckSymbolExists.cxx.o -MF CMakeFiles/cmTC_2960a.dir/CheckSymbolExists.cxx.o.d -o CMakeFiles/cmTC_2960a.dir/CheckSymbolExists.cxx.o -c /Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-UxqmOW/CheckSymbolExists.cxx
+        /Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-UxqmOW/CheckSymbolExists.cxx:8:19: error: use of undeclared identifier 'F_FULLFSYNC'
             8 |   return ((int*)(&F_FULLFSYNC))[argc];
               |                   ^
         1 error generated.
-        make[1]: *** [CMakeFiles/cmTC_3a267.dir/CheckSymbolExists.cxx.o] Error 1
-        make: *** [cmTC_3a267/fast] Error 2
+        make[1]: *** [CMakeFiles/cmTC_2960a.dir/CheckSymbolExists.cxx.o] Error 1
+        make: *** [cmTC_2960a/fast] Error 2
         
       exitCode: 2
   -
@@ -309,34 +268,32 @@ events:
     backtrace:
       - "/opt/homebrew/share/cmake/Modules/CheckSymbolExists.cmake:163 (try_compile)"
       - "/opt/homebrew/share/cmake/Modules/CheckCXXSymbolExists.cmake:74 (__CHECK_SYMBOL_EXISTS_IMPL)"
-      - "CMakeLists.txt:61 (check_cxx_symbol_exists)"
+      - "CMakeLists.txt:80 (check_cxx_symbol_exists)"
     checks:
       - "Looking for O_CLOEXEC"
     directories:
-      source: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-PCxSQL"
-      binary: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-PCxSQL"
+      source: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-z7E1To"
+      binary: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-z7E1To"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/opt/homebrew/bin/clang-scan-deps"
-      CMAKE_CXX_FLAGS: " -s WASM=1 -s EXPORTED_FUNCTIONS=['_main'] -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap']"
+      CMAKE_CXX_FLAGS: " -pthread"
       CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: "  -s WASM=1 -s SINGLE_FILE=0 -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap'] -s EXPORTED_FUNCTIONS=['_main','_malloc','_free'] -s INITIAL_MEMORY=16MB -s ALLOW_MEMORY_GROWTH=1 -s FORCE_FILESYSTEM=1"
       CMAKE_MODULE_PATH: "/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules"
     buildResult:
       variable: "HAVE_O_CLOEXEC"
       cached: true
       stdout: |
-        Change Dir: '/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-PCxSQL'
+        Change Dir: '/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-z7E1To'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_85af1/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_85af1.dir/build.make CMakeFiles/cmTC_85af1.dir/build
-        Building CXX object CMakeFiles/cmTC_85af1.dir/CheckSymbolExists.cxx.o
-        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/em++   -s WASM=1 -s EXPORTED_FUNCTIONS=['_main'] -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap']  -std=c++11 -MD -MT CMakeFiles/cmTC_85af1.dir/CheckSymbolExists.cxx.o -MF CMakeFiles/cmTC_85af1.dir/CheckSymbolExists.cxx.o.d -o CMakeFiles/cmTC_85af1.dir/CheckSymbolExists.cxx.o -c /Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-PCxSQL/CheckSymbolExists.cxx
-        em++: warning: linker setting ignored during compilation: 'WASM' [-Wunused-command-line-argument]
-        em++: warning: linker setting ignored during compilation: 'EXPORTED_FUNCTIONS' [-Wunused-command-line-argument]
-        em++: warning: linker setting ignored during compilation: 'EXPORTED_RUNTIME_METHODS' [-Wunused-command-line-argument]
-        Linking CXX executable cmTC_85af1.js
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_85af1.dir/link.txt --verbose=1
-        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/em++  -s WASM=1 -s EXPORTED_FUNCTIONS=['_main'] -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap']  @CMakeFiles/cmTC_85af1.dir/objects1.rsp -o cmTC_85af1.js
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_7f56f/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_7f56f.dir/build.make CMakeFiles/cmTC_7f56f.dir/build
+        Building CXX object CMakeFiles/cmTC_7f56f.dir/CheckSymbolExists.cxx.o
+        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/em++   -pthread  -std=c++11 -MD -MT CMakeFiles/cmTC_7f56f.dir/CheckSymbolExists.cxx.o -MF CMakeFiles/cmTC_7f56f.dir/CheckSymbolExists.cxx.o.d -o CMakeFiles/cmTC_7f56f.dir/CheckSymbolExists.cxx.o -c /Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-z7E1To/CheckSymbolExists.cxx
+        Linking CXX executable cmTC_7f56f.js
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7f56f.dir/link.txt --verbose=1
+        em++: warning: -pthread + ALLOW_MEMORY_GROWTH may run non-wasm code slowly, see https://github.com/WebAssembly/design/issues/1271 [-Wpthreads-mem-growth]
+        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/em++  -pthread    -s WASM=1 -s SINGLE_FILE=0 -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap'] -s EXPORTED_FUNCTIONS=['_main','_malloc','_free'] -s INITIAL_MEMORY=16MB -s ALLOW_MEMORY_GROWTH=1 -s FORCE_FILESYSTEM=1  @CMakeFiles/cmTC_7f56f.dir/objects1.rsp -o cmTC_7f56f.js
         
       exitCode: 0
   -
@@ -345,36 +302,34 @@ events:
       - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
       - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
       - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
-      - "CMakeLists.txt:90 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:109 (check_cxx_compiler_flag)"
     checks:
       - "Performing Test HAVE_CLANG_THREAD_SAFETY"
     directories:
-      source: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-ghzFnC"
-      binary: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-ghzFnC"
+      source: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-xYOOo6"
+      binary: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-xYOOo6"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/opt/homebrew/bin/clang-scan-deps"
-      CMAKE_CXX_FLAGS: " -s WASM=1 -s EXPORTED_FUNCTIONS=['_main'] -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap'] -fno-exceptions -fno-rtti"
+      CMAKE_CXX_FLAGS: " -pthread -fno-exceptions -fno-rtti"
       CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: "  -s WASM=1 -s SINGLE_FILE=0 -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap'] -s EXPORTED_FUNCTIONS=['_main','_malloc','_free'] -s INITIAL_MEMORY=16MB -s ALLOW_MEMORY_GROWTH=1 -s FORCE_FILESYSTEM=1"
       CMAKE_MODULE_PATH: "/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules"
     buildResult:
       variable: "HAVE_CLANG_THREAD_SAFETY"
       cached: true
       stdout: |
-        Change Dir: '/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-ghzFnC'
+        Change Dir: '/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-xYOOo6'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_a7351/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_a7351.dir/build.make CMakeFiles/cmTC_a7351.dir/build
-        Building CXX object CMakeFiles/cmTC_a7351.dir/src.cxx.o
-        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/em++ -DHAVE_CLANG_THREAD_SAFETY  -s WASM=1 -s EXPORTED_FUNCTIONS=['_main'] -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap'] -fno-exceptions -fno-rtti  -std=c++11   -Wthread-safety -MD -MT CMakeFiles/cmTC_a7351.dir/src.cxx.o -MF CMakeFiles/cmTC_a7351.dir/src.cxx.o.d -o CMakeFiles/cmTC_a7351.dir/src.cxx.o -c /Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-ghzFnC/src.cxx
-        em++: warning: linker setting ignored during compilation: 'WASM' [-Wunused-command-line-argument]
-        em++: warning: linker setting ignored during compilation: 'EXPORTED_FUNCTIONS' [-Wunused-command-line-argument]
-        em++: warning: linker setting ignored during compilation: 'EXPORTED_RUNTIME_METHODS' [-Wunused-command-line-argument]
-        Linking CXX executable cmTC_a7351.js
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a7351.dir/link.txt --verbose=1
-        cache:INFO: generating system asset: symbol_lists/9d279132011ce6d5c84f4b222c30da857cfcc3d3.json... (this will be cached in "/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cache/symbol_lists/9d279132011ce6d5c84f4b222c30da857cfcc3d3.json" for subsequent builds)
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_3e8e4/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_3e8e4.dir/build.make CMakeFiles/cmTC_3e8e4.dir/build
+        Building CXX object CMakeFiles/cmTC_3e8e4.dir/src.cxx.o
+        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/em++ -DHAVE_CLANG_THREAD_SAFETY  -pthread -fno-exceptions -fno-rtti  -std=c++11   -Wthread-safety -MD -MT CMakeFiles/cmTC_3e8e4.dir/src.cxx.o -MF CMakeFiles/cmTC_3e8e4.dir/src.cxx.o.d -o CMakeFiles/cmTC_3e8e4.dir/src.cxx.o -c /Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-xYOOo6/src.cxx
+        Linking CXX executable cmTC_3e8e4.js
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3e8e4.dir/link.txt --verbose=1
+        em++: warning: -pthread + ALLOW_MEMORY_GROWTH may run non-wasm code slowly, see https://github.com/WebAssembly/design/issues/1271 [-Wpthreads-mem-growth]
+        cache:INFO: generating system asset: symbol_lists/8be9650920488bc459ad326dde82cac9a8b4cf87.json... (this will be cached in "/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cache/symbol_lists/8be9650920488bc459ad326dde82cac9a8b4cf87.json" for subsequent builds)
         cache:INFO:  - ok
-        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/em++  -s WASM=1 -s EXPORTED_FUNCTIONS=['_main'] -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap'] -fno-exceptions -fno-rtti  @CMakeFiles/cmTC_a7351.dir/objects1.rsp -o cmTC_a7351.js
+        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/em++  -pthread -fno-exceptions -fno-rtti    -s WASM=1 -s SINGLE_FILE=0 -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap'] -s EXPORTED_FUNCTIONS=['_main','_malloc','_free'] -s INITIAL_MEMORY=16MB -s ALLOW_MEMORY_GROWTH=1 -s FORCE_FILESYSTEM=1  @CMakeFiles/cmTC_3e8e4.dir/objects1.rsp -o cmTC_3e8e4.js
         
       exitCode: 0
   -
@@ -383,34 +338,32 @@ events:
       - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
       - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
       - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
-      - "CMakeLists.txt:93 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:112 (check_cxx_compiler_flag)"
     checks:
       - "Performing Test LEVELDB_HAVE_NO_MISSING_FIELD_INITIALIZERS"
     directories:
-      source: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-A8W8bC"
-      binary: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-A8W8bC"
+      source: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-KiCGEK"
+      binary: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-KiCGEK"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/opt/homebrew/bin/clang-scan-deps"
-      CMAKE_CXX_FLAGS: " -s WASM=1 -s EXPORTED_FUNCTIONS=['_main'] -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap'] -fno-exceptions -fno-rtti"
+      CMAKE_CXX_FLAGS: " -pthread -fno-exceptions -fno-rtti"
       CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: "  -s WASM=1 -s SINGLE_FILE=0 -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap'] -s EXPORTED_FUNCTIONS=['_main','_malloc','_free'] -s INITIAL_MEMORY=16MB -s ALLOW_MEMORY_GROWTH=1 -s FORCE_FILESYSTEM=1"
       CMAKE_MODULE_PATH: "/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules"
     buildResult:
       variable: "LEVELDB_HAVE_NO_MISSING_FIELD_INITIALIZERS"
       cached: true
       stdout: |
-        Change Dir: '/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-A8W8bC'
+        Change Dir: '/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-KiCGEK'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_e45a7/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_e45a7.dir/build.make CMakeFiles/cmTC_e45a7.dir/build
-        Building CXX object CMakeFiles/cmTC_e45a7.dir/src.cxx.o
-        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/em++ -DLEVELDB_HAVE_NO_MISSING_FIELD_INITIALIZERS  -s WASM=1 -s EXPORTED_FUNCTIONS=['_main'] -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap'] -fno-exceptions -fno-rtti  -std=c++11   -Wno-missing-field-initializers -MD -MT CMakeFiles/cmTC_e45a7.dir/src.cxx.o -MF CMakeFiles/cmTC_e45a7.dir/src.cxx.o.d -o CMakeFiles/cmTC_e45a7.dir/src.cxx.o -c /Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-A8W8bC/src.cxx
-        em++: warning: linker setting ignored during compilation: 'WASM' [-Wunused-command-line-argument]
-        em++: warning: linker setting ignored during compilation: 'EXPORTED_FUNCTIONS' [-Wunused-command-line-argument]
-        em++: warning: linker setting ignored during compilation: 'EXPORTED_RUNTIME_METHODS' [-Wunused-command-line-argument]
-        Linking CXX executable cmTC_e45a7.js
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e45a7.dir/link.txt --verbose=1
-        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/em++  -s WASM=1 -s EXPORTED_FUNCTIONS=['_main'] -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap'] -fno-exceptions -fno-rtti  @CMakeFiles/cmTC_e45a7.dir/objects1.rsp -o cmTC_e45a7.js
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_dea1a/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_dea1a.dir/build.make CMakeFiles/cmTC_dea1a.dir/build
+        Building CXX object CMakeFiles/cmTC_dea1a.dir/src.cxx.o
+        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/em++ -DLEVELDB_HAVE_NO_MISSING_FIELD_INITIALIZERS  -pthread -fno-exceptions -fno-rtti  -std=c++11   -Wno-missing-field-initializers -MD -MT CMakeFiles/cmTC_dea1a.dir/src.cxx.o -MF CMakeFiles/cmTC_dea1a.dir/src.cxx.o.d -o CMakeFiles/cmTC_dea1a.dir/src.cxx.o -c /Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-KiCGEK/src.cxx
+        Linking CXX executable cmTC_dea1a.js
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dea1a.dir/link.txt --verbose=1
+        em++: warning: -pthread + ALLOW_MEMORY_GROWTH may run non-wasm code slowly, see https://github.com/WebAssembly/design/issues/1271 [-Wpthreads-mem-growth]
+        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/em++  -pthread -fno-exceptions -fno-rtti    -s WASM=1 -s SINGLE_FILE=0 -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap'] -s EXPORTED_FUNCTIONS=['_main','_malloc','_free'] -s INITIAL_MEMORY=16MB -s ALLOW_MEMORY_GROWTH=1 -s FORCE_FILESYSTEM=1  @CMakeFiles/cmTC_dea1a.dir/objects1.rsp -o cmTC_dea1a.js
         
       exitCode: 0
   -
@@ -418,34 +371,32 @@ events:
     backtrace:
       - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
       - "/opt/homebrew/share/cmake/Modules/CheckCXXSourceCompiles.cmake:58 (cmake_check_source_compiles)"
-      - "CMakeLists.txt:99 (check_cxx_source_compiles)"
+      - "CMakeLists.txt:118 (check_cxx_source_compiles)"
     checks:
       - "Performing Test HAVE_CXX17_HAS_INCLUDE"
     directories:
-      source: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-Qfu9ny"
-      binary: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-Qfu9ny"
+      source: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-dki2QG"
+      binary: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-dki2QG"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/opt/homebrew/bin/clang-scan-deps"
-      CMAKE_CXX_FLAGS: " -s WASM=1 -s EXPORTED_FUNCTIONS=['_main'] -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap'] -fno-exceptions -fno-rtti"
+      CMAKE_CXX_FLAGS: " -pthread -fno-exceptions -fno-rtti"
       CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: "  -s WASM=1 -s SINGLE_FILE=0 -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap'] -s EXPORTED_FUNCTIONS=['_main','_malloc','_free'] -s INITIAL_MEMORY=16MB -s ALLOW_MEMORY_GROWTH=1 -s FORCE_FILESYSTEM=1"
       CMAKE_MODULE_PATH: "/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules"
     buildResult:
       variable: "HAVE_CXX17_HAS_INCLUDE"
       cached: true
       stdout: |
-        Change Dir: '/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-Qfu9ny'
+        Change Dir: '/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-dki2QG'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_906ea/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_906ea.dir/build.make CMakeFiles/cmTC_906ea.dir/build
-        Building CXX object CMakeFiles/cmTC_906ea.dir/src.cxx.o
-        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/em++ -DHAVE_CXX17_HAS_INCLUDE  -s WASM=1 -s EXPORTED_FUNCTIONS=['_main'] -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap'] -fno-exceptions -fno-rtti  -std=c++11 -MD -MT CMakeFiles/cmTC_906ea.dir/src.cxx.o -MF CMakeFiles/cmTC_906ea.dir/src.cxx.o.d -o CMakeFiles/cmTC_906ea.dir/src.cxx.o -c /Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-Qfu9ny/src.cxx
-        em++: warning: linker setting ignored during compilation: 'WASM' [-Wunused-command-line-argument]
-        em++: warning: linker setting ignored during compilation: 'EXPORTED_FUNCTIONS' [-Wunused-command-line-argument]
-        em++: warning: linker setting ignored during compilation: 'EXPORTED_RUNTIME_METHODS' [-Wunused-command-line-argument]
-        Linking CXX executable cmTC_906ea.js
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_906ea.dir/link.txt --verbose=1
-        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/em++  -s WASM=1 -s EXPORTED_FUNCTIONS=['_main'] -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap'] -fno-exceptions -fno-rtti  @CMakeFiles/cmTC_906ea.dir/objects1.rsp -o cmTC_906ea.js
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_14401/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_14401.dir/build.make CMakeFiles/cmTC_14401.dir/build
+        Building CXX object CMakeFiles/cmTC_14401.dir/src.cxx.o
+        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/em++ -DHAVE_CXX17_HAS_INCLUDE  -pthread -fno-exceptions -fno-rtti  -std=c++11 -MD -MT CMakeFiles/cmTC_14401.dir/src.cxx.o -MF CMakeFiles/cmTC_14401.dir/src.cxx.o.d -o CMakeFiles/cmTC_14401.dir/src.cxx.o -c /Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-dki2QG/src.cxx
+        Linking CXX executable cmTC_14401.js
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_14401.dir/link.txt --verbose=1
+        em++: warning: -pthread + ALLOW_MEMORY_GROWTH may run non-wasm code slowly, see https://github.com/WebAssembly/design/issues/1271 [-Wpthreads-mem-growth]
+        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/em++  -pthread -fno-exceptions -fno-rtti    -s WASM=1 -s SINGLE_FILE=0 -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap'] -s EXPORTED_FUNCTIONS=['_main','_malloc','_free'] -s INITIAL_MEMORY=16MB -s ALLOW_MEMORY_GROWTH=1 -s FORCE_FILESYSTEM=1  @CMakeFiles/cmTC_14401.dir/objects1.rsp -o cmTC_14401.js
         
       exitCode: 0
   -
@@ -455,31 +406,31 @@ events:
       - "/opt/homebrew/share/cmake/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
       - "/opt/homebrew/share/cmake/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
       - "/opt/homebrew/share/cmake/Modules/FindThreads.cmake:163 (_threads_check_libc)"
-      - "CMakeLists.txt:292 (find_package)"
+      - "CMakeLists.txt:311 (find_package)"
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-HGHelp"
-      binary: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-HGHelp"
+      source: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-zRJ8vO"
+      binary: "/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-zRJ8vO"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/opt/homebrew/bin/clang-scan-deps"
       CMAKE_C_FLAGS: " -Wstrict-prototypes"
       CMAKE_C_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: "  -s WASM=1 -s SINGLE_FILE=0 -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap'] -s EXPORTED_FUNCTIONS=['_main','_malloc','_free'] -s INITIAL_MEMORY=16MB -s ALLOW_MEMORY_GROWTH=1 -s FORCE_FILESYSTEM=1"
       CMAKE_MODULE_PATH: "/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules;/opt/homebrew/Cellar/emscripten/4.0.0/libexec/cmake/Modules"
     buildResult:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: '/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-HGHelp'
+        Change Dir: '/Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-zRJ8vO'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_4321f/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_4321f.dir/build.make CMakeFiles/cmTC_4321f.dir/build
-        Building C object CMakeFiles/cmTC_4321f.dir/src.c.o
-        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/emcc -DCMAKE_HAVE_LIBC_PTHREAD  -Wstrict-prototypes  -std=c11 -MD -MT CMakeFiles/cmTC_4321f.dir/src.c.o -MF CMakeFiles/cmTC_4321f.dir/src.c.o.d -o CMakeFiles/cmTC_4321f.dir/src.c.o -c /Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-HGHelp/src.c
-        Linking C executable cmTC_4321f.js
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4321f.dir/link.txt --verbose=1
-        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/emcc  -Wstrict-prototypes  @CMakeFiles/cmTC_4321f.dir/objects1.rsp -o cmTC_4321f.js
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_59859/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_59859.dir/build.make CMakeFiles/cmTC_59859.dir/build
+        Building C object CMakeFiles/cmTC_59859.dir/src.c.o
+        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/emcc -DCMAKE_HAVE_LIBC_PTHREAD  -Wstrict-prototypes  -std=c11 -MD -MT CMakeFiles/cmTC_59859.dir/src.c.o -MF CMakeFiles/cmTC_59859.dir/src.c.o.d -o CMakeFiles/cmTC_59859.dir/src.c.o -c /Users/user/Desktop/dev/leveldb.wasm/build_wasm/CMakeFiles/CMakeScratch/TryCompile-zRJ8vO/src.c
+        Linking C executable cmTC_59859.js
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_59859.dir/link.txt --verbose=1
+        /opt/homebrew/Cellar/emscripten/4.0.0/libexec/emcc  -Wstrict-prototypes    -s WASM=1 -s SINGLE_FILE=0 -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap'] -s EXPORTED_FUNCTIONS=['_main','_malloc','_free'] -s INITIAL_MEMORY=16MB -s ALLOW_MEMORY_GROWTH=1 -s FORCE_FILESYSTEM=1  @CMakeFiles/cmTC_59859.dir/objects1.rsp -o cmTC_59859.js
         
       exitCode: 0
 ...

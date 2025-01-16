@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = @CMakeFiles/leveldbutil.dir/includes_CXX.rsp
 
-CXX_FLAGS =  -s WASM=1 -s EXPORTED_FUNCTIONS=['_main'] -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap'] -fno-exceptions -fno-rtti -O3 -DNDEBUG -std=c++11 -Werror -Wthread-safety
+CXX_FLAGS =  -pthread -fno-exceptions -fno-rtti -O3 -DNDEBUG -std=c++11 -Werror -Wthread-safety
 
