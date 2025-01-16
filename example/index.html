@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LevelDB.wasm</title>
+</head>
+<body>
+    <p>LevelDB.wasm is a port of LevelDB for WebAssembly.</p>
+    <div>
+        <button onclick="testLevelDB()">Test LevelDB</button>
+        <pre id="output"></pre>
+    </div>
+
+    <script src="../build_wasm/leveldbutil.js"></script>
+    <script>
+        function log(text) {
+            document.getElementById('output').textContent += text + '\n';
+        }
+
+        async function testLevelDB() {
+            try {
+                // WebAssemblyの初期化を待つ
+                await Module.ready;
+                
+                log('LevelDB.wasm initialized');
+                
+                // メモリの確保
+                const key = 'test_key';
+                const value = 'test_value';
+                
+                // TODO: ここでLevelDBの操作を実行
+                // 現時点では、WebAssemblyモジュールが正しく読み込まれることのみを確認
+                
+                log('Test completed successfully');
+            } catch (error) {
+                log('Error: ' + error.message);
+            }
+        }
+
+        // WebAssemblyモジュールの読み込み完了を待つ
+        Module.onRuntimeInitialized = function() {
+            log('WebAssembly module loaded');
+        };
+    </script>
+</body>
+</html>
