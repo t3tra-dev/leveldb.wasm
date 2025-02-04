@@ -1,47 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LevelDB.wasm</title>
-</head>
-<body>
-    <p>LevelDB.wasm is a port of LevelDB for WebAssembly.</p>
-    <div>
-        <button onclick="testLevelDB()">Test LevelDB</button>
-        <pre id="output"></pre>
-    </div>
-
+  <head>
+    <meta charset="UTF-8" />
+    <title>LevelDB.wasm File Viewer</title>
+    <style>
+      #fileContent {
+        white-space: pre-wrap;
+        font-family: monospace;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="file" id="fileInput" multiple />
+    <div id="fileContent"></div>
     <script src="../build_wasm/leveldbutil.js"></script>
     <script>
-        function log(text) {
-            document.getElementById('output').textContent += text + '\n';
-        }
+      Module.onRuntimeInitialized = async function () {
+        const fileInput = document.getElementById("fileInput");
+        const fileContent = document.getElementById("fileContent");
 
-        async function testLevelDB() {
+        fileInput.addEventListener("change", async (event) => {
+          let output = "";
+          const originalOut = Module.print;
+          const originalErr = Module.printErr;
+
+          try {
+            const files = event.target.files;
+            if (!files.length) return;
+
+            // 仮想ファイルシステムにディレクトリを作成
             try {
-                // WebAssemblyの初期化を待つ
-                await Module.ready;
-                
-                log('LevelDB.wasm initialized');
-                
-                // メモリの確保
-                const key = 'test_key';
-                const value = 'test_value';
-                
-                // TODO: ここでLevelDBの操作を実行
-                // 現時点では、WebAssemblyモジュールが正しく読み込まれることのみを確認
-                
-                log('Test completed successfully');
-            } catch (error) {
-                log('Error: ' + error.message);
-            }
-        }
+              FS.mkdir("/db");
+            } catch (e) {}
 
-        // WebAssemblyモジュールの読み込み完了を待つ
-        Module.onRuntimeInitialized = function() {
-            log('WebAssembly module loaded');
-        };
+            // ファイルを仮想ファイルシステムにコピー
+            for (let file of files) {
+              const arrayBuffer = await file.arrayBuffer();
+              const uint8Array = new Uint8Array(arrayBuffer);
+              const path = `/db/${file.name}`;
+              FS.writeFile(path, uint8Array);
+              console.log(`File written to: ${path}`);
+            }
+
+            // 標準出力とエラー出力をキャプチャ
+            Module.print = Module.printErr = (text) => {
+              output += text + "\n";
+              console.log(`[Debug] ${text}`);
+              if (text.includes("Error")) {
+                console.error(`[Error Detail] ${text}`);
+              }
+            };
+
+            // mainを呼び出し
+            const args = ["leveldbutil", "dump", `/db/${files[0].name}`];
+            const argPtrs = args.map((arg) => {
+              const buf = Module._malloc(arg.length + 1);
+              Module.stringToUTF8(arg, buf, arg.length + 1);
+              return buf;
+            });
+
+            let result;
+            try {
+              result = Module.ccall(
+                "main",
+                "number",
+                ["number", "array"],
+                [args.length, argPtrs]
+              );
+
+              if (result !== 0) {
+                throw new Error(output || "Failed to dump database");
+              }
+
+              fileContent.textContent =
+                output || "Database dump completed successfully\n";
+            } finally {
+              // メモリ解放
+              argPtrs.forEach((ptr) => Module._free(ptr));
+              // 標準出力の復元
+              Module.print = originalOut;
+              Module.printErr = originalErr;
+            }
+          } catch (error) {
+            console.error("[Error]", error);
+            fileContent.textContent = `Error: ${error.message}`;
+          }
+        });
+      };
     </script>
-</body>
+  </body>
 </html>

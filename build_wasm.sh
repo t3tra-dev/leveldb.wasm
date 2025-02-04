@@ -1,0 +1,13 @@
+rm -rf build_wasm
+mkdir build_wasm && cd build_wasm
+
+emcmake cmake .. \
+  -DCMAKE_BUILD_TYPE=Release \
+  -DLEVELDB_BUILD_TESTS=OFF \
+  -DLEVELDB_BUILD_BENCHMARKS=OFF \
+  -DBUILD_SHARED_LIBS=OFF \
+  -DBENCHMARK_ENABLE_TESTING=OFF \
+  -DBENCHMARK_ENABLE_GTEST_TESTS=OFF \
+  -DCMAKE_EXE_LINKER_FLAGS="-s WASM=1 -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap','FS','getValue','setValue'] -s FORCE_FILESYSTEM=1 -s ALLOW_MEMORY_GROWTH=1 -s EXPORTED_FUNCTIONS=['_main','_malloc','_free'] -s EXIT_RUNTIME=1 -s INITIAL_MEMORY=16MB"
+
+emmake make VERBOSE=1
